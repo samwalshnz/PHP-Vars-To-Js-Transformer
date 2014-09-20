@@ -23,8 +23,8 @@ class UtilitiesServiceProvider extends ServiceProvider {
     public function register()
     {
         $this->app->bind('JavaScript', function($app) {
-            $view = Config::get('utilities::config.bind_js_vars_to_this_view');
-            $namespace = Config::get('utilities::config.js_namespace');
+            $view = Config::get('packages/laracasts/utilities/config.bind_js_vars_to_this_view');
+            $namespace = Config::get('packages/laracasts/utilities/config.js_namespace');
 
             $binder = new LaravelViewBinder($app['events'], $view);
 
